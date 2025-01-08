@@ -15,29 +15,49 @@ const categories = [
     subcategories: ['HTML', 'CSS', 'JavaScript'],
   },
   {
-    title: 'Basic Programming Language',
-    subcategories: ['Java', 'C++', 'C#', 'Python', 'PHP'],
+    title: 'Best Programming Language',
+    subcategories: [
+      'Java', 
+      'C++', 
+      'C#', 
+      'Python', 
+      'PHP',
+      'Ruby',
+      'Swift',
+      'Go',
+      'R',
+      'Kotlin',
+      'TypeScript',
+    ],
   },
   {
-    title: 'Framework and Library',
-    subcategories: [
-      'React (JavaScript)',
-      'Spring Boot (Java)',
-      'Flask (Python)',
-      'Laravel (PHP)',
-    ],
+    title: 'Frameworks & Libraries',
+    subcategories: ['Frameworks & Libraries'],
   },
 ];
 
 const Body = ({ navigation }) => {
-  const renderSubcategory = ({ item, category }) => (
-    <TouchableOpacity
-      style={styles.item}
-      onPress={() => navigation.navigate('Detail', { category, item })}
-    >
-      <Text style={styles.itemText}>{item}</Text>
-    </TouchableOpacity>
-  );
+  const renderSubcategory = ({ item, category }) => {
+    if (item === 'Frameworks & Libraries') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Frameworks')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    return (
+      <TouchableOpacity
+        style={styles.item}
+        onPress={() => navigation.navigate('Detail', { category, item })}
+      >
+        <Text style={styles.itemText}>{item}</Text>
+      </TouchableOpacity>
+    );
+  };
 
   const renderCategory = ({ item }) => (
     <View style={styles.categoryContainer}>

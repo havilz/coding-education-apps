@@ -10,6 +10,12 @@ import { CPPInfo } from '../data/basic-programing-language/CPP';
 import { CSharpInfo } from '../data/basic-programing-language/CSharp';
 import { PythonInfo } from '../data/basic-programing-language/Python';
 import { PHPInfo } from '../data/basic-programing-language/PHP';
+import { RubyInfo } from '../data/basic-programing-language/Ruby';
+import { RInfo } from '../data/basic-programing-language/R';
+import { SwiftInfo } from '../data/basic-programing-language/Swift';
+import { GoInfo } from '../data/basic-programing-language/G';
+import { KotlinInfo } from '../data/basic-programing-language/Kotlin';
+import { TypeScriptInfo } from '../data/basic-programing-language/TypeScript';
 
 const DetailScreen = ({ route, navigation }) => {
   const { category, item } = route.params;
@@ -32,6 +38,18 @@ const DetailScreen = ({ route, navigation }) => {
     data = PythonInfo;
   } else if (item === 'PHP') {
     data = PHPInfo;
+  } else if (item === 'Ruby') {
+    data = RubyInfo;
+  } else if (item === 'R') {
+    data = RInfo;
+  } else if (item === 'Swift') {
+    data = SwiftInfo;
+  } else if (item === 'G') {
+    data = GoInfo;
+  } else if (item === 'Kotlin') {
+    data = KotlinInfo;
+  } else if (item === 'TypeScript') {
+    data = TypeScriptInfo;
   }
 
   return (
@@ -65,12 +83,24 @@ const DetailScreen = ({ route, navigation }) => {
           </TouchableOpacity>
 
           {/* Navigasi ke elemen terkait */}
-          <TouchableOpacity
-            style={styles.link}
-            onPress={() => navigation.navigate('Detail', { category, item: data.related })}
-          >
-            <Text style={styles.linkText}>Pelajari lebih lanjut tentang {data.related}</Text>
-          </TouchableOpacity>
+          {data.related && (
+            <TouchableOpacity
+              style={styles.link}
+              onPress={() => {
+                if (data.related === 'Frameworks & Libraries') {
+                  // Jika related adalah Frameworks & Libraries, navigasi ke FrameworksScreen
+                  navigation.navigate('Frameworks');
+                } else {
+                  // Jika related adalah elemen lain (seperti CSS), navigasi ke DetailScreen
+                  navigation.navigate('Detail', { category, item: data.related });
+                }
+              }}
+            >
+              <Text style={styles.linkText}>
+                Pelajari lebih lanjut tentang {data.related}
+              </Text>
+            </TouchableOpacity>
+          )}
         </>
       ) : (
         <Text style={styles.description}>Informasi untuk {item} belum tersedia.</Text>

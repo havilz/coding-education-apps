@@ -6,7 +6,7 @@ export const JavaScriptInfo = {
     'Dipadukan dengan HTML untuk struktur dan CSS untuk styling.',
     'Digunakan dalam framework seperti React untuk membangun aplikasi web.',
   ],
-  related: 'React',
+  related: 'Frameworks & Libraries',
   documentationLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   example: `
     <script>
