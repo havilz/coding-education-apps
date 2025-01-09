@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native
 const categories = [
   {
     title: 'Basic Role',
-    subcategories: ['Frontend', 'Backend'],
+    subcategories: ['Frontend Roadmap', 'Backend'],
   },
   {
     title: 'Best Role',
@@ -32,7 +32,7 @@ const categories = [
   },
   {
     title: 'Frameworks & Libraries',
-    subcategories: ['Frameworks & Libraries'],
+    subcategories: ['Frameworks & Libraries',],
   },
 ];
 
@@ -43,6 +43,17 @@ const Body = ({ navigation }) => {
         <TouchableOpacity
           style={styles.item}
           onPress={() => navigation.navigate('Frameworks')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    if (item === 'Frontend Roadmap') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('FrontendRoadmap')}
         >
           <Text style={styles.itemText}>{item}</Text>
         </TouchableOpacity>

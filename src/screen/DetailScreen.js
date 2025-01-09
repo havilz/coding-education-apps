@@ -44,7 +44,7 @@ const DetailScreen = ({ route, navigation }) => {
     data = RInfo;
   } else if (item === 'Swift') {
     data = SwiftInfo;
-  } else if (item === 'G') {
+  } else if (item === 'Go') {
     data = GoInfo;
   } else if (item === 'Kotlin') {
     data = KotlinInfo;
@@ -88,10 +88,8 @@ const DetailScreen = ({ route, navigation }) => {
               style={styles.link}
               onPress={() => {
                 if (data.related === 'Frameworks & Libraries') {
-                  // Jika related adalah Frameworks & Libraries, navigasi ke FrameworksScreen
                   navigation.navigate('Frameworks');
                 } else {
-                  // Jika related adalah elemen lain (seperti CSS), navigasi ke DetailScreen
                   navigation.navigate('Detail', { category, item: data.related });
                 }
               }}
@@ -101,6 +99,14 @@ const DetailScreen = ({ route, navigation }) => {
               </Text>
             </TouchableOpacity>
           )}
+
+          {/* Navigasi ke QuizScreen */}
+          <TouchableOpacity
+            style={styles.quizButton}
+            onPress={() => navigation.navigate('Quiz', { item })}
+          >
+            <Text style={styles.quizButtonText}>Kerjakan Kuis tentang {item}</Text>
+          </TouchableOpacity>
         </>
       ) : (
         <Text style={styles.description}>Informasi untuk {item} belum tersedia.</Text>
@@ -156,6 +162,18 @@ const styles = StyleSheet.create({
   linkText: {
     color: '#fff',
     fontSize: 16,
+  },
+  quizButton: {
+    marginTop: 20,
+    padding: 15,
+    backgroundColor: '#FF5722',
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  quizButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });
 

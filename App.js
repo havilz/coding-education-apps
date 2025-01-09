@@ -4,7 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from './src/screen/HomeScreen';
 import DetailScreen from './src/screen/DetailScreen';
-import FrameworksScreen from './src/screen/FrameworkScreen'; // pastikan file pathnya benar
+import FrameworksScreen from './src/screen/FrameworkScreen';
+import FrontendRoadmapScreen from './src/screen/FrontendRoadmapScreen';
+import QuizScreen from './src/screen/QuizScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,12 +22,22 @@ export default function App() {
         <Stack.Screen 
           name="Detail" 
           component={DetailScreen} 
-          options={({ route }) => ({ title: route.params.name })}
+          options={({ route }) => ({ title: route.params.name })} 
         />
         <Stack.Screen
           name="Frameworks"
           component={FrameworksScreen}
           options={{ title: 'Frameworks & Libraries' }}
+        />
+        <Stack.Screen
+          name="FrontendRoadmap"
+          component={FrontendRoadmapScreen}
+          options={{ title: 'Frontend Roadmap' }}
+        />
+        <Stack.Screen
+          name="Quiz" 
+          component={QuizScreen}
+          options={({ route }) => ({ title: `Kuis - ${route.params.item}` })}
         />
       </Stack.Navigator>
     </NavigationContainer>
