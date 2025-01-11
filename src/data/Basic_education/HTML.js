@@ -1,84 +1,171 @@
-export const HTMLInfo = {
-  description: 'HTML (HyperText Markup Language) adalah bahasa standar untuk membuat dan mendesain halaman web.',
-  uses: [
-    'Membuat struktur halaman web.',
-    'Mendukung elemen seperti teks, gambar, tabel, dan multimedia.',
-    'Dipadukan dengan CSS untuk styling dan JavaScript untuk interaktivitas.',
-  ],
-  related: 'CSS',
-  documentationLink: 'https://developer.mozilla.org/id/docs/Web/HTML',
-  example: `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contoh Halaman HTML</title>
-    </head>
-    <body>
-      <header>
-        <h1>Selamat Datang di Halaman HTML</h1>
-        <nav>
-          <ul>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#services">Layanan</a></li>
-            <li><a href="#contact">Kontak</a></li>
-          </ul>
-        </nav>
-      </header>
-    
-      <section id="about">
-        <h2>Tentang HTML</h2>
-        <p>HTML adalah bahasa markup standar untuk membuat halaman web.</p>
-      </section>
-    
-      <section id="services">
-        <h2>Layanan Kami</h2>
-        <ul>
-          <li>Mendesain Halaman Web</li>
-          <li>Mengembangkan Aplikasi Web</li>
-          <li>Membuat Struktur Konten Web</li>
-        </ul>
-      </section>
-    
-      <section id="contact">
-        <h2>Kontak Kami</h2>
-        <p>Untuk informasi lebih lanjut, hubungi kami di <a href="mailto:contact@web.com">contact@web.com</a>.</p>
-      </section>
-    
-      <footer>
-        <p>&copy; 2025 Website Kami. Semua hak dilindungi.</p>
-      </footer>
-    </body>
-    </html>
-  `,
-  detailedExplanation: `
-    HTML adalah bahasa markup yang digunakan untuk menyusun dan menampilkan konten di web. Hal ini termasuk penempatan teks, gambar, tabel, multimedia, dan elemen-elemen lainnya pada halaman web.
-    
-    HTML bekerja dengan cara menggunakan berbagai tag untuk menyusun konten pada halaman. Setiap tag memiliki fungsi dan peran tertentu dalam mendesain halaman. Berikut adalah beberapa elemen dasar dalam HTML:
-    
-    1. **\`<html>\`**: Tag pembuka dan penutup dari dokumen HTML. Semua konten halaman web ditempatkan di dalam tag ini.
-    
-    2. **\`<head>\`**: Bagian yang berisi informasi metadata, seperti pengaturan karakter, pengaturan viewport, dan judul halaman.
-    
-    3. **\`<body>\`**: Bagian utama dari halaman, yang berisi konten seperti teks, gambar, dan elemen lainnya yang ditampilkan di browser.
-    
-    4. **\`<header>\` dan \`<footer>\`**: Digunakan untuk bagian atas dan bawah halaman. Header sering digunakan untuk judul dan navigasi, sementara footer digunakan untuk informasi hak cipta atau catatan lainnya.
-    
-    5. **\`<nav>\` dan \`<ul>\`**: Digunakan untuk membuat menu navigasi dalam bentuk daftar. \`<ul>\` adalah daftar tak terurut, dan di dalamnya terdapat item-item daftar yang dibuat dengan \`<li>\`.
-    
-    6. **\`<section>\`**: Digunakan untuk membagi halaman menjadi bagian-bagian terpisah.
-    
-    7. **\`<a>\`**: Tag untuk membuat link yang dapat diklik, baik itu untuk navigasi antar halaman atau menuju halaman lain.
-    
-    8. **\`<h1>\` hingga \`<h6>\`**: Digunakan untuk membuat judul atau heading dengan tingkat kepentingan yang berkurang dari \`<h1>\` hingga \`<h6>\`.
-    
-    9. **\`<p>\`**: Digunakan untuk menulis paragraf teks.
-    
-    10. **\`<img>\`**: Digunakan untuk menyisipkan gambar ke dalam halaman.
-    
-    11. **\`<table>\`, \`<tr>\`, \`<td>\`**: Digunakan untuk membuat tabel dan menampilkan data dalam format tabel.
-    
-    HTML bekerja sangat baik ketika digabungkan dengan **CSS** (Cascading Style Sheets) untuk memberikan desain dan **JavaScript** untuk memberikan interaktivitas pada halaman.
-  `,
+import React from 'react';
+import { ScrollView, Text, StyleSheet, View, Linking, TouchableOpacity } from 'react-native';
+
+const HTMLDetailScreen = ({ navigation }) => {
+  const openDocumentation = () => {
+    Linking.openURL('https://developer.mozilla.org/en-US/docs/Web/HTML');
+  };
+
+  const navigateToCSS = () => {
+    navigation.navigate('CSSDetailScreen');
+  };
+
+  const navigateToJavaScript = () => {
+    navigation.navigate('JavaScriptDetailScreen');
+  };
+
+  const navigateToQuiz = () => {
+    navigation.navigate('Quiz', { item: 'HTML' });
+  };
+
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.title}>Apa itu HTML?</Text>
+      <Text style={styles.paragraph}>
+        HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk mendeskripsikan struktur dan konten halaman web. HTML memungkinkan Anda untuk membuat elemen-elemen seperti heading, paragraf, tabel, gambar, tautan, dan banyak lagi. Setiap elemen HTML ditandai menggunakan tag, seperti `p` untuk paragraf atau `img` untuk gambar.
+      </Text>
+
+      <Text style={styles.subTitle}>Mengapa HTML Penting?</Text>
+      <Text style={styles.paragraph}>
+        1. **Fondasi Web**: HTML adalah dasar dari semua halaman web, memberikan struktur untuk konten.
+      </Text>
+      <Text style={styles.paragraph}>
+        2. **Mudah Dipelajari**: Sintaks HTML sederhana dan intuitif, menjadikannya pilihan ideal untuk pemula.
+      </Text>
+      <Text style={styles.paragraph}>
+        3. **Dukungan Universal**: Semua browser mendukung HTML, menjadikannya bahasa markup yang universal.
+      </Text>
+
+      <Text style={styles.subTitle}>Contoh Kode HTML</Text>
+      <View style={styles.codeCard}>
+        <Text style={styles.codeText}>
+          {`<!DOCTYPE html>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`<html>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`  <head>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`    <title>Judul Halaman</title>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`  </head>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`  <body>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`    <h1>Halo Dunia!</h1>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`    <p>Ini adalah paragraf pertama saya.</p>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`  </body>`}
+        </Text>
+        <Text style={styles.codeText}>
+          {`</html>`}
+        </Text>
+      </View>
+
+      <Text style={styles.subTitle}>Hubungan HTML dengan CSS</Text>
+      <Text style={styles.paragraph}>
+        HTML memberikan struktur konten, sementara **CSS** (Cascading Style Sheets) digunakan untuk mengatur tampilan dan gaya konten tersebut. Dengan CSS, Anda dapat mengubah warna, ukuran font, tata letak, dan elemen visual lainnya dari halaman HTML. 
+        {'\n\n'}
+        <Text style={styles.link} onPress={navigateToCSS}>
+          Pelajari lebih lanjut tentang CSS di sini.
+        </Text>
+      </Text>
+
+      <Text style={styles.subTitle}>Hubungan HTML dengan JavaScript</Text>
+      <Text style={styles.paragraph}>
+        HTML dan **JavaScript** bekerja bersama untuk menambahkan interaktivitas ke halaman web. JavaScript memungkinkan Anda untuk membuat elemen dinamis seperti tombol yang merespons klik, animasi, dan validasi form. Dengan HTML sebagai dasar, JavaScript memungkinkan halaman web menjadi lebih hidup dan fungsional.
+        {'\n\n'}
+        <Text style={styles.link} onPress={navigateToJavaScript}>
+          Pelajari lebih lanjut tentang JavaScript di sini.
+        </Text>
+      </Text>
+
+      <Text style={styles.subTitle}>Fitur Utama HTML</Text>
+      <Text style={styles.paragraph}>
+        - **Elemen Semantik**: Elemen seperti `header`, `footer`, dan `section` membantu memberikan konteks yang lebih jelas pada konten.
+      </Text>
+      <Text style={styles.paragraph}>
+        - **Formulir**: HTML mendukung form untuk input data pengguna dengan elemen seperti `input`, `textarea`, dan `button`.
+      </Text>
+      <Text style={styles.paragraph}>
+        - **Multimedia**: HTML mendukung elemen multimedia seperti `img` untuk gambar, `audio` untuk audio, dan `video` untuk video.
+      </Text>
+
+      <Text style={styles.paragraph}>
+        Untuk mempelajari lebih lanjut tentang HTML, kunjungi{' '}
+        <Text style={styles.link} onPress={openDocumentation}>
+          dokumentasi resmi HTML di MDN.
+        </Text>
+      </Text>
+
+      <TouchableOpacity style={styles.quizButton} onPress={navigateToQuiz}>
+        <Text style={styles.quizButtonText}>Mulai Kuis HTML</Text>
+      </TouchableOpacity>
+    </ScrollView>
+  );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    backgroundColor: '#f9f9f9',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 15,
+  },
+  subTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 20,
+  },
+  paragraph: {
+    fontSize: 16,
+    color: '#555',
+    marginBottom: 15,
+    lineHeight: 24,
+  },
+  codeCard: {
+    backgroundColor: '#f4f4f4',
+    borderRadius: 8,
+    padding: 15,
+    marginVertical: 15,
+    borderWidth: 1,
+    borderColor: '#ddd',
+  },
+  codeText: {
+    fontFamily: 'monospace',
+    fontSize: 14,
+    color: '#333',
+    lineHeight: 20,
+  },
+  link: {
+    color: '#1E90FF',
+    fontWeight: 'bold',
+  },
+  quizButton: {
+    backgroundColor: '#FF5722',
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+    marginTop: 30,
+    alignItems: 'center',
+  },
+  quizButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
+
+export default HTMLDetailScreen;

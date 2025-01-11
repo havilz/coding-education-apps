@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native
 const categories = [
   {
     title: 'Basic Role',
-    subcategories: ['Frontend Roadmap', 'Backend'],
+    subcategories: ['Frontend Roadmap', 'Backend Roadmap'],
   },
   {
     title: 'Best Role',
@@ -28,6 +28,7 @@ const categories = [
       'R',
       'Kotlin',
       'TypeScript',
+      'Node.js',
     ],
   },
   {
@@ -59,11 +60,181 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+    if (item === 'Backend Roadmap') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('BackendRoadmap')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Web Dev') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('WebDeveloperRoadmapScreen')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'HTML') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('HTML')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'CSS') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('CSS')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'JavaScript') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('JavaScript')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'C++') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('C++')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'C#') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('C#')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Python') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Python')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Kotlin') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Kotlin')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Java') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Java')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Ruby') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Ruby')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'PHP') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('PHP')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'R') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('R')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Go') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Go')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Swift') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Swift')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'TypeScript') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('TypeScript')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+    if (item === 'Node.js') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Node.js')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
 
     return (
       <TouchableOpacity
         style={styles.item}
-        onPress={() => navigation.navigate('Detail', { category, item })}
+        onPress={() => navigation.navigate({ category, item })}
       >
         <Text style={styles.itemText}>{item}</Text>
       </TouchableOpacity>

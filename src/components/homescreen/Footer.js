@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const Footer = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Contact: roadmap@app.com</Text>
+      <Text style={styles.text}>Contact: 0812442371288</Text>
       <Text style={styles.text}>Email: support@roadmap.com</Text>
     </View>
   );

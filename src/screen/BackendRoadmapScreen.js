@@ -1,44 +1,52 @@
 import React from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const roadmapData = [
+const backendRoadmapData = [
   {
     title: 'Dasar-Dasar',
     items: [
-      { name: 'HTML', screen: 'HTML', params: { category: 'Dasar-Dasar', item: 'HTML' } },
-      { name: 'CSS', screen: 'CSS', params: { category: 'Dasar-Dasar', item: 'CSS' } },
-      { name: 'JavaScript', screen: 'JavaScript', params: { category: 'Dasar-Dasar', item: 'JavaScript' } },
+      { name: 'Linux', screen: 'LinuxDetailScreen',},
+      { name: 'Terminal & Shell', screen: 'TerminalShellDetailScreen',},
+      { name: 'Networking', screen: 'NetworkingDetailScreen'},
     ],
   },
   {
-    title: 'Frameworks & Libraries',
+    title: 'Bahasa Pemrograman',
     items: [
-      { name: 'React.js', screen: 'Frameworks' },
-      { name: 'Angular', screen: 'Frameworks' },
-      { name: 'Vue.js', screen: 'Frameworks' },
+      { name: 'Node.js', screen: 'Frameworks' },
+      { name: 'Python', screen: 'Python' },
+      { name: 'Ruby', screen: 'Ruby' },
+    ],
+  },
+  {
+    title: 'Database',
+    items: [
+      { name: 'MySQL', screen: 'MYSQLDetailScreen' },
+      { name: 'PostgreSQL', screen: 'PostgreSQLDetailScreen' },
+      { name: 'MongoDB', screen: 'MongoDBDetailScreen' },
     ],
   },
   {
     title: 'Tools dan Build System',
     items: [
-      { name: 'Webpack', screen: 'WebpackDetailScreen' },
-      { name: 'Babel', screen: 'BabelDetailScreen' },
-      { name: 'NPM', screen: 'NPMDetailScreen' },
+      { name: 'Docker', screen: 'DockerDetailScreen' },
+      { name: 'Kubernetes', screen: 'KubernetesDetailScreen' },
+      { name: 'Nginx', screen: 'NginxDetailScreen' },
     ],
   },
   {
-    title: 'Testing',
+    title: 'Testing dan Debugging',
     items: [
-      { name: 'Jest', screen: 'JestDetailScreen' },
-      { name: 'Cypress', screen: 'CypressDetailScreen' },
+      { name: 'Mocha', screen: 'MochaDetailScreen' },
+      { name: 'Chai', screen: 'ChaiDetailScreen' },
     ],
   },
 ];
 
-const FrontendRoadmapScreen = ({ navigation }) => {
+const BackendRoadmapScreen = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {roadmapData.map((section, index) => (
+      {backendRoadmapData.map((section, index) => (
         <View key={index} style={styles.section}>
           <Text style={styles.subtitle}>{section.title}</Text>
           {section.items.map((item, itemIndex) => (
@@ -77,14 +85,14 @@ const styles = StyleSheet.create({
   },
   item: {
     padding: 10,
-    backgroundColor: '#e8f5e9',
+    backgroundColor: '#f1f8e9',
     borderRadius: 8,
     marginBottom: 8,
   },
   itemText: {
     fontSize: 16,
-    color: '#4CAF50',
+    color: '#388E3C',
   },
 });
 
-export default FrontendRoadmapScreen;
+export default BackendRoadmapScreen;
