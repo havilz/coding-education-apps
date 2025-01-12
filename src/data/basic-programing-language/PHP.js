@@ -68,15 +68,34 @@ const PHPDetailScreen = ({ navigation }) => {
         - **Array**: Koleksi data yang terurut, contohnya: {`array(1, 2, 3)`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        PHP memiliki berbagai framework dan pustaka yang mempermudah pengembangan aplikasi:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **Laravel**: Framework PHP yang sangat populer untuk aplikasi web modern. {'\n'}
-        - **Symfony**: Framework PHP yang digunakan untuk membangun aplikasi enterprise. {'\n'}
-        - **CodeIgniter**: Framework PHP ringan untuk aplikasi web kecil hingga menengah.
-      </Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
+<Text style={styles.paragraph}>
+  PHP memiliki berbagai pustaka dan framework yang digunakan dalam pengembangan:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Laravel' })}
+  >
+    Laravel
+  </Text>
+  : Framework PHP yang sangat populer untuk aplikasi web modern. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Symfony' })}
+  >
+    Symfony
+  </Text>
+  : Framework PHP yang digunakan untuk membangun aplikasi enterprise. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'CodeIgniter' })}
+  >
+    CodeIgniter
+  </Text>
+  : Framework PHP ringan untuk aplikasi web kecil hingga menengah.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama PHP</Text>
       <Text style={styles.paragraph}>

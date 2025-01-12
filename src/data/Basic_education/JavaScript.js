@@ -69,24 +69,48 @@ const JavaScriptDetailScreen = ({ navigation }) => {
       <Text style={styles.paragraph}>
         - **Undefined**: Nilai yang diberikan kepada variabel yang belum diinisialisasi.
       </Text>
-
       <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        JavaScript memiliki berbagai framework dan library yang mempermudah pengembangan aplikasi:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **React.js**: Library untuk membangun antarmuka pengguna. {'\n'}
-        - **Vue.js**: Framework progresif untuk membangun antarmuka pengguna yang interaktif. {'\n'}
-        - **Angular**: Framework lengkap untuk membangun aplikasi web modern. {'\n'}
-        - **Node.js**: Platform JavaScript sisi server. {'\n'}
-        - **jQuery**: Library untuk manipulasi DOM yang sederhana dan cepat.
-      </Text>
-      <Text style={styles.paragraph}>
-        Untuk mempelajari tentang Framework yang digunakan, Anda dapat mengunjungi halaman berikut:{'\n'}
-        - <Text style={styles.link} onPress={() => navigation.navigate('Frameworks')}>Pelajari lebih lanjut tentang Frameworks</Text>{'\n'}
-      </Text>
-
-      <Text style={styles.subTitle}>Fitur Utama JavaScript</Text>
+        <Text style={styles.paragraph}>
+          JavaScript memiliki berbagai framework dan library yang mempermudah pengembangan aplikasi:
+        </Text>
+        <Text style={styles.paragraph}>
+          <Text
+            style={styles.link}
+            onPress={() => navigation.navigate('Frameworks', { targetFramework: 'React.js' })}
+          >
+            React.js
+          </Text>
+          : Library untuk membangun antarmuka pengguna. {'\n'}
+          <Text
+            style={styles.link}
+            onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Vue.js' })}
+          >
+            Vue.js
+          </Text>
+          : Framework progresif untuk membangun antarmuka pengguna yang interaktif. {'\n'}
+          <Text
+            style={styles.link}
+            onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Angular' })}
+          >
+            Angular
+          </Text>
+          : Framework lengkap untuk membangun aplikasi web modern. {'\n'}
+          <Text
+            style={styles.link}
+            onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Node.JS' })}
+          >
+            Node.js
+          </Text>
+          : Platform JavaScript sisi server. {'\n'}
+          <Text
+            style={styles.link}
+            onPress={() => navigation.navigate('Frameworks', { targetFramework: 'jQuery' })}
+          >
+            jQuery
+          </Text>
+          : Library untuk manipulasi DOM yang sederhana dan cepat.
+        </Text>
+        <Text style={styles.subTitle}>Fitur Utama JavaScript</Text>
       <Text style={styles.paragraph}>
         - **DOM Manipulation**: Mengubah struktur halaman secara langsung melalui DOM. {'\n'}
         - **Event Handling**: Menangani interaksi pengguna dengan elemen halaman. {'\n'}

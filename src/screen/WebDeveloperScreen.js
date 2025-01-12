@@ -28,7 +28,7 @@ const webDeveloperRoadmapData = [
   {
     title: 'Backend dan Database',
     items: [
-      { name: 'Node.js', screen: 'NodeJSDetailScreen' },
+      { name: 'Node.js', screen: 'Frameworks' },
       { name: 'Python', screen: 'Python' },
       { name: 'MySQL', screen: 'MYSQLDetailScreen' },
       { name: 'PostgreSQL', screen: 'PostgreSQLDetailScreen' },

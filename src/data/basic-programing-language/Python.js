@@ -64,15 +64,41 @@ const PythonDetailScreen = ({ navigation }) => {
         - **List**: Koleksi terurut, contoh: {`[1, 2, 3, 4]`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        Beberapa pustaka populer di Python:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **Django**: Framework web yang digunakan untuk membangun aplikasi web secara cepat dan efisien. {'\n'}
-        - **Flask**: Framework mikro yang digunakan untuk aplikasi web lebih kecil dan sederhana. {'\n'}
-        - **Pandas**: Library untuk analisis data dan manipulasi struktur data.
-      </Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
+<Text style={styles.paragraph}>
+  Beberapa pustaka populer di Python:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Django' })}
+  >
+    Django
+  </Text>
+  : Framework web yang digunakan untuk membangun aplikasi web secara cepat dan efisien. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Flask' })}
+  >
+    Flask
+  </Text>
+  : Framework mikro yang digunakan untuk aplikasi web lebih kecil dan sederhana. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Pandas' })}
+  >
+    Pandas
+  </Text>
+  : Library untuk analisis data dan manipulasi struktur data.
+</Text>
+
+<Text style={styles.subTitle}>Fitur Utama Python</Text>
+<Text style={styles.paragraph}>
+  - **Kemudahan Pembelajaran**: Python memiliki sintaksis yang jelas dan mudah dipahami. {'\n'}
+  - **Portabilitas**: Python dapat dijalankan di berbagai platform. {'\n'}
+  - **Pustaka Standard**: Python dilengkapi dengan pustaka standar yang kaya untuk banyak aplikasi.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama Python</Text>
       <Text style={styles.paragraph}>

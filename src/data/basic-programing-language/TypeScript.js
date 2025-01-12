@@ -67,16 +67,41 @@ const TypeScriptDetailScreen = ({ navigation }) => {
         - **any**: Tipe yang dapat digunakan untuk menyimpan nilai dari tipe apa saja, yang menghindari pengecekan tipe.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        TypeScript digunakan dalam berbagai framework dan library untuk meningkatkan produktivitas pengembangan:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **Angular**: Framework berbasis TypeScript untuk membangun aplikasi web. {'\n'}
-        - **React**: Library JavaScript yang sering digunakan dengan TypeScript untuk membangun antarmuka pengguna. {'\n'}
-        - **Vue**: Framework progresif yang juga mendukung penggunaan TypeScript. {'\n'}
-        - **NestJS**: Framework backend berbasis TypeScript untuk membangun aplikasi server-side.
-      </Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
+<Text style={styles.paragraph}>
+  TypeScript digunakan dalam berbagai framework dan library untuk meningkatkan produktivitas pengembangan:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Angular' })}
+  >
+    Angular
+  </Text>
+  : Framework berbasis TypeScript untuk membangun aplikasi web. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'React' })}
+  >
+    React
+  </Text>
+  : Library JavaScript yang sering digunakan dengan TypeScript untuk membangun antarmuka pengguna. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Vue' })}
+  >
+    Vue
+  </Text>
+  : Framework progresif yang juga mendukung penggunaan TypeScript. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'NestJS' })}
+  >
+    NestJS
+  </Text>
+  : Framework backend berbasis TypeScript untuk membangun aplikasi server-side. {'\n'}
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama TypeScript</Text>
       <Text style={styles.paragraph}>

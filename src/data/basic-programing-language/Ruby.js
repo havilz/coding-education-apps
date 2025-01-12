@@ -64,15 +64,34 @@ const RubyDetailScreen = ({ navigation }) => {
         - **Array**: Koleksi data yang terurut, contohnya: {`[1, 2, 3]`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        Ruby memiliki berbagai framework dan pustaka yang mempermudah pengembangan aplikasi:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **Ruby on Rails**: Framework web yang memungkinkan pengembangan aplikasi web secara cepat dan efisien. {'\n'}
-        - **Sinatra**: Framework web sederhana untuk aplikasi web kecil. {'\n'}
-        - **RSpec**: Framework testing untuk aplikasi Ruby.
-      </Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
+<Text style={styles.paragraph}>
+  Ruby memiliki berbagai pustaka dan framework yang digunakan dalam pengembangan:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Ruby on Rails' })}
+  >
+    Ruby on Rails
+  </Text>
+  : Framework web yang memungkinkan pengembangan aplikasi web secara cepat dan efisien. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Sinatra' })}
+  >
+    Sinatra
+  </Text>
+  : Framework web sederhana untuk aplikasi web kecil. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'RSpec' })}
+  >
+    RSpec
+  </Text>
+  : Framework testing untuk aplikasi Ruby.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama Ruby</Text>
       <Text style={styles.paragraph}>

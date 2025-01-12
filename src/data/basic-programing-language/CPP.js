@@ -7,7 +7,7 @@ const CppDetailScreen = ({ navigation }) => {
   };
 
   const navigateToQuiz = () => {
-    navigation.navigate('Quiz', { item: 'C++' });
+    navigation.navigate('Quiz', { item: 'CPP' });
   };
 
   return (
@@ -75,20 +75,47 @@ const CppDetailScreen = ({ navigation }) => {
       </Text>
 
       <Text style={styles.subTitle}>Library dan Framework Populer</Text>
-      <Text style={styles.paragraph}>
-        C++ memiliki banyak library dan framework yang digunakan dalam pengembangan:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **STL (Standard Template Library)**: Koleksi struktur data dan algoritma. {'\n'}
-        - **Qt**: Framework untuk membangun aplikasi GUI. {'\n'}
-        - **Boost**: Library tambahan yang memperluas kemampuan standar C++. {'\n'}
-        - **OpenCV**: Library untuk pengolahan gambar dan video. {'\n'}
-        - **Unreal Engine**: Digunakan untuk pengembangan game tingkat lanjut.
-      </Text>
-      <Text style={styles.paragraph}>
-        Untuk mempelajari tentang Framework yang digunakan, Anda dapat mengunjungi halaman berikut:{'\n'}
-        - <Text style={styles.link} onPress={() => navigation.navigate('Frameworks')}>Pelajari lebih lanjut tentang Frameworks</Text>
-      </Text>
+<Text style={styles.paragraph}>
+  C++ memiliki banyak library dan framework yang digunakan dalam pengembangan:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'STL' })}
+  >
+    STL (Standard Template Library)
+  </Text>
+  : Koleksi struktur data dan algoritma. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Qt' })}
+  >
+    Qt
+  </Text>
+  : Framework untuk membangun aplikasi GUI. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Boost' })}
+  >
+    Boost
+  </Text>
+  : Library tambahan yang memperluas kemampuan standar C++. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'OpenCV' })}
+  >
+    OpenCV
+  </Text>
+  : Library untuk pengolahan gambar dan video. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('UnrealEngineDetailScreen',)}
+  >
+    Unreal Engine
+  </Text>
+  : Digunakan untuk pengembangan game tingkat lanjut.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama C++</Text>
       <Text style={styles.paragraph}>

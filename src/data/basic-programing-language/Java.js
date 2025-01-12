@@ -69,14 +69,33 @@ const JavaDetailScreen = ({ navigation }) => {
       </Text>
 
       <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        Java memiliki berbagai framework dan pustaka yang mempermudah pengembangan aplikasi:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **Spring**: Framework untuk membangun aplikasi enterprise dengan Java. {'\n'}
-        - **Hibernate**: Framework untuk mempermudah pemetaan objek-relasional (ORM). {'\n'}
-        - **JavaFX**: Framework untuk pengembangan aplikasi desktop berbasis Java.
-      </Text>
+<Text style={styles.paragraph}>
+  Java memiliki berbagai framework dan pustaka yang mempermudah pengembangan aplikasi:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Spring' })}
+  >
+    Spring
+  </Text>
+  : Framework untuk membangun aplikasi enterprise dengan Java. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Hibernate' })}
+  >
+    Hibernate
+  </Text>
+  : Framework untuk mempermudah pemetaan objek-relasional (ORM). {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'JavaFX' })}
+  >
+    JavaFX
+  </Text>
+  : Framework untuk pengembangan aplikasi desktop berbasis Java.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama Java</Text>
       <Text style={styles.paragraph}>

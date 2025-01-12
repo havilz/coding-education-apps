@@ -7,7 +7,7 @@ const CSharpDetailScreen = ({ navigation }) => {
   };
 
   const navigateToQuiz = () => {
-    navigation.navigate('Quiz', { item: 'C#' });
+    navigation.navigate('Quiz', { item: 'CSharp' });
   };
 
   return (
@@ -70,20 +70,40 @@ const CSharpDetailScreen = ({ navigation }) => {
         - **bool**: Untuk nilai logika {`true`} atau {`false`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
       <Text style={styles.paragraph}>
-        C# memiliki berbagai framework dan library yang mempermudah pengembangan aplikasi:
+        C++ memiliki banyak library dan framework yang digunakan dalam pengembangan:
       </Text>
       <Text style={styles.paragraph}>
-        - **.NET Core**: Platform lintas platform untuk membangun aplikasi web dan API. {'\n'}
-        - **Xamarin**: Framework untuk pengembangan aplikasi mobile untuk Android dan iOS. {'\n'}
-        - **ASP.NET**: Framework untuk pengembangan aplikasi web dinamis dan API. {'\n'}
-        - **Entity Framework**: ORM untuk bekerja dengan database dalam aplikasi C#.
-      </Text>
-      <Text style={styles.paragraph}>
-        Untuk mempelajari tentang Framework yang digunakan, Anda dapat mengunjungi halaman berikut:{'\n'}
-        - <Text style={styles.link} onPress={() => navigation.navigate('Frameworks')}>Pelajari lebih lanjut tentang Frameworks</Text>
-      </Text>
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Net Core' })}
+        >
+          Net Core
+        </Text>
+        : Platform lintas platform untuk membangun aplikasi web dan API. {'\n'}
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Xamarin' })}
+        >
+          Xamarin
+        </Text>
+        : Framework untuk pengembangan aplikasi mobile untuk Android dan iOS. {'\n'}
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'ASP.NET' })}
+        >
+          ASP.NET
+        </Text>
+        : Framework untuk pengembangan aplikasi web dinamis dan API. {'\n'}
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Entity' })}
+        >
+          Entity
+        </Text>
+        : ORM untuk bekerja dengan database dalam aplikasi C# {'\n'}
+        </Text>
 
       <Text style={styles.subTitle}>Fitur Utama C#</Text>
       <Text style={styles.paragraph}>

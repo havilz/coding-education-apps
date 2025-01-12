@@ -65,16 +65,41 @@ const RDetailScreen = ({ navigation }) => {
         - **Factor**: Data kategorikal dengan level tertentu, contoh: {`factor(c("low", "medium", "high"))`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        R memiliki berbagai framework dan pustaka yang mempermudah pengembangan dan analisis data:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **ggplot2**: Library untuk visualisasi data dengan fleksibilitas tinggi. {'\n'}
-        - **dplyr**: Library untuk manipulasi data dalam bentuk tabel. {'\n'}
-        - **tidyr**: Library untuk transformasi data dan pembersihan data.
-        - **shiny**: Framework untuk membangun aplikasi web interaktif dengan R.
-      </Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
+<Text style={styles.paragraph}>
+  R memiliki berbagai framework dan pustaka yang mempermudah pengembangan dan analisis data:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'ggplot2' })}
+  >
+    ggplot2
+  </Text>
+  : Library untuk visualisasi data dengan fleksibilitas tinggi. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'dplyr' })}
+  >
+    dplyr
+  </Text>
+  : Library untuk manipulasi data dalam bentuk tabel. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'tidyr' })}
+  >
+    tidyr
+  </Text>
+  : Library untuk transformasi data dan pembersihan data. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'shiny' })}
+  >
+    shiny
+  </Text>
+  : Framework untuk membangun aplikasi web interaktif dengan R. {'\n'}
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama R</Text>
       <Text style={styles.paragraph}>

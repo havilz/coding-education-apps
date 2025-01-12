@@ -70,16 +70,41 @@ const SwiftDetailScreen = ({ navigation }) => {
         - **Dictionary**: Koleksi data dalam pasangan kunci-nilai, contoh: {`["name": "John", "age": 30]`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        Swift memiliki berbagai pustaka dan framework yang digunakan untuk membangun aplikasi modern:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **UIKit**: Framework utama untuk membangun antarmuka pengguna di iOS. {'\n'}
-        - **SwiftUI**: Framework deklaratif untuk membangun antarmuka pengguna di seluruh platform Apple. {'\n'}
-        - **CoreData**: Framework untuk pengelolaan data lokal dalam aplikasi. {'\n'}
-        - **Alamofire**: Library untuk melakukan permintaan HTTP yang mudah dan efisien.
-      </Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
+<Text style={styles.paragraph}>
+  Swift memiliki berbagai pustaka dan framework yang digunakan untuk membangun aplikasi modern:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'UIKit' })}
+  >
+    UIKit
+  </Text>
+  : Framework utama untuk membangun antarmuka pengguna di iOS. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'SwiftUI' })}
+  >
+    SwiftUI
+  </Text>
+  : Framework deklaratif untuk membangun antarmuka pengguna di seluruh platform Apple. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'CoreData' })}
+  >
+    CoreData
+  </Text>
+  : Framework untuk pengelolaan data lokal dalam aplikasi. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Alamofire' })}
+  >
+    Alamofire
+  </Text>
+  : Library untuk melakukan permintaan HTTP yang mudah dan efisien.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama Swift</Text>
       <Text style={styles.paragraph}>

@@ -64,15 +64,34 @@ const KotlinDetailScreen = ({ navigation }) => {
         - **List**: Koleksi data yang terurut, contohnya: {`listOf(1, 2, 3)`}.
       </Text>
 
-      <Text style={styles.subTitle}>Framework dan Library Populer</Text>
+      <Text style={styles.subTitle}>Library dan Framework Populer</Text>
       <Text style={styles.paragraph}>
-        Kotlin memiliki berbagai framework dan pustaka yang mempermudah pengembangan aplikasi:
+        Kotlin memiliki berbagai library dan framework yang digunakan dalam pengembangan:
       </Text>
       <Text style={styles.paragraph}>
-        - **Ktor**: Framework untuk membuat aplikasi web dengan Kotlin. {'\n'}
-        - **Exposed**: Framework ORM untuk bekerja dengan database. {'\n'}
-        - **Anko**: Library untuk pengembangan UI Android dengan Kotlin.
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Ktor' })}
+        >
+          Ktor
+        </Text>
+        : Framework untuk membuat aplikasi web dengan Kotlin. {'\n'}
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Exposed' })}
+        >
+          Exposed
+        </Text>
+        : Framework ORM untuk bekerja dengan database. {'\n'}
+        <Text
+          style={styles.link}
+          onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Anko' })}
+        >
+          Anko
+        </Text>
+        : Library untuk pengembangan UI Android dengan Kotlin. {'\n'}
       </Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama Kotlin</Text>
       <Text style={styles.paragraph}>

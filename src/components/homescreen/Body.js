@@ -8,11 +8,11 @@ const categories = [
   },
   {
     title: 'Best Role',
-    subcategories: ['Web Dev', 'Mobile Dev', 'Software Dev', 'Game Dev', 'Cyber Security'],
+    subcategories: ['Web Dev', 'Mobile Dev', 'Software Dev', 'Game Dev'],
   },
   {
     title: 'Basic Education',
-    subcategories: ['HTML', 'CSS', 'JavaScript'],
+    subcategories: ['HTML', 'CSS', 'JavaScript', 'OOP', 'Struktur Data'],
   },
   {
     title: 'Best Programming Language',
@@ -28,17 +28,17 @@ const categories = [
       'R',
       'Kotlin',
       'TypeScript',
-      'Node.js',
     ],
   },
   {
     title: 'Frameworks & Libraries',
-    subcategories: ['Frameworks & Libraries',],
+    subcategories: ['Frameworks & Libraries'],
   },
 ];
 
 const Body = ({ navigation }) => {
   const renderSubcategory = ({ item, category }) => {
+    // Handle specific subcategory navigation
     if (item === 'Frameworks & Libraries') {
       return (
         <TouchableOpacity
@@ -53,13 +53,14 @@ const Body = ({ navigation }) => {
     if (item === 'Frontend Roadmap') {
       return (
         <TouchableOpacity
-          style={styles.item}
+          style={styles.item} 
           onPress={() => navigation.navigate('FrontendRoadmap')}
         >
           <Text style={styles.itemText}>{item}</Text>
         </TouchableOpacity>
       );
     }
+
     if (item === 'Backend Roadmap') {
       return (
         <TouchableOpacity
@@ -70,6 +71,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'Web Dev') {
       return (
         <TouchableOpacity
@@ -80,6 +82,41 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
+    if (item === 'Mobile Dev') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('MobileDeveloperRoadmapScreen')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    if (item === 'Software Dev') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('SoftwareDeveloperRoadmapScreen')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    if (item === 'Game Dev') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('GameDeveloperRoadmapScreen')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    // Handle programming languages
     if (item === 'HTML') {
       return (
         <TouchableOpacity
@@ -90,6 +127,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'CSS') {
       return (
         <TouchableOpacity
@@ -100,6 +138,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'JavaScript') {
       return (
         <TouchableOpacity
@@ -110,26 +149,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
-    if (item === 'C++') {
-      return (
-        <TouchableOpacity
-          style={styles.item}
-          onPress={() => navigation.navigate('C++')}
-        >
-          <Text style={styles.itemText}>{item}</Text>
-        </TouchableOpacity>
-      );
-    }
-    if (item === 'C#') {
-      return (
-        <TouchableOpacity
-          style={styles.item}
-          onPress={() => navigation.navigate('C#')}
-        >
-          <Text style={styles.itemText}>{item}</Text>
-        </TouchableOpacity>
-      );
-    }
+
     if (item === 'Python') {
       return (
         <TouchableOpacity
@@ -140,16 +160,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
-    if (item === 'Kotlin') {
-      return (
-        <TouchableOpacity
-          style={styles.item}
-          onPress={() => navigation.navigate('Kotlin')}
-        >
-          <Text style={styles.itemText}>{item}</Text>
-        </TouchableOpacity>
-      );
-    }
+
     if (item === 'Java') {
       return (
         <TouchableOpacity
@@ -160,6 +171,40 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
+    if (item === 'C++') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('C++')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    if (item === 'C#') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('C#')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    if (item === 'Kotlin') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('Kotlin')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
     if (item === 'Ruby') {
       return (
         <TouchableOpacity
@@ -170,6 +215,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'PHP') {
       return (
         <TouchableOpacity
@@ -180,6 +226,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'R') {
       return (
         <TouchableOpacity
@@ -190,6 +237,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'Go') {
       return (
         <TouchableOpacity
@@ -200,6 +248,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'Swift') {
       return (
         <TouchableOpacity
@@ -210,6 +259,7 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
+
     if (item === 'TypeScript') {
       return (
         <TouchableOpacity
@@ -220,11 +270,23 @@ const Body = ({ navigation }) => {
         </TouchableOpacity>
       );
     }
-    if (item === 'Node.js') {
+    
+    if (item === 'OOP') {
       return (
         <TouchableOpacity
           style={styles.item}
-          onPress={() => navigation.navigate('Node.js')}
+          onPress={() => navigation.navigate('OOPDetailScreen')}
+        >
+          <Text style={styles.itemText}>{item}</Text>
+        </TouchableOpacity>
+      );
+    }
+
+    if (item === 'Struktur Data') {
+      return (
+        <TouchableOpacity
+          style={styles.item}
+          onPress={() => navigation.navigate('DataStructureDetailScreen')}
         >
           <Text style={styles.itemText}>{item}</Text>
         </TouchableOpacity>

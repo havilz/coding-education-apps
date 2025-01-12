@@ -80,15 +80,40 @@ const GoDetailScreen = ({ navigation }) => {
       </Text>
 
       <Text style={styles.subTitle}>Framework dan Library Populer</Text>
-      <Text style={styles.paragraph}>
-        Go memiliki berbagai pustaka dan framework yang digunakan untuk membangun aplikasi modern:
-      </Text>
-      <Text style={styles.paragraph}>
-        - **Gin**: Framework web Go yang ringan dan cepat. {'\n'}
-        - **Gorilla**: Library untuk membangun aplikasi web dengan Go. {'\n'}
-        - **Go-Kit**: Toolkit untuk membangun aplikasi mikroservis di Go.
-        - **gRPC**: Framework untuk komunikasi antar layanan yang efisien.
-      </Text>
+<Text style={styles.paragraph}>
+  Go memiliki berbagai pustaka dan framework yang digunakan untuk membangun aplikasi modern:
+</Text>
+<Text style={styles.paragraph}>
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Gin' })}
+  >
+    Gin
+  </Text>
+  : Framework web Go yang ringan dan cepat. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Gorilla' })}
+  >
+    Gorilla
+  </Text>
+  : Library untuk membangun aplikasi web dengan Go. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'Go-Kit' })}
+  >
+    Go-Kit
+  </Text>
+  : Toolkit untuk membangun aplikasi mikroservis di Go. {'\n'}
+  <Text
+    style={styles.link}
+    onPress={() => navigation.navigate('Frameworks', { targetFramework: 'gRPC' })}
+  >
+    gRPC
+  </Text>
+  : Framework untuk komunikasi antar layanan yang efisien.
+</Text>
+
 
       <Text style={styles.subTitle}>Fitur Utama Go</Text>
       <Text style={styles.paragraph}>
