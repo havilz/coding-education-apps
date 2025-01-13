@@ -92,7 +92,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LoadingScreen" screenOptions={{ headerShown: false}} >
+      <Stack.Navigator initialRouteName="LoadingScreen" screenOptions={{ headerShown: true}} >
         <Stack.Screen 
           name="LoadingScreen" 
           component={LoadingScreen} 
@@ -101,7 +101,7 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={HomeScreen} 
-          options={{ headerShown: false }} 
+          options={{ title: 'Programer Education' }} 
         />
         <Stack.Screen
           name="HTML"

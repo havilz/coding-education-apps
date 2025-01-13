@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, Animated } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, Animated, Image } from 'react-native';
 
 const LoadingScreen = ({ navigation }) => {
   const fadeAnim = useRef(new Animated.Value(0)).current; // Nilai animasi awal
@@ -27,7 +27,9 @@ const LoadingScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color="#4CAF50" />
+      {/* Gambar Logo */}
+      <Image source={require('../../assets/logo.png')} style={styles.logo} />
+      <ActivityIndicator size="large" color="#4CAF50" style={styles.activityIndicator} />
       <Animated.Text
         style={[
           styles.text,
@@ -36,6 +38,8 @@ const LoadingScreen = ({ navigation }) => {
       >
         Hallo...
       </Animated.Text>
+      {/* Teks Copyright */}
+      <Text style={styles.copyright}>© 2025 Programer Education</Text>
     </View>
   );
 };
@@ -47,11 +51,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#f9f9f9',
   },
+  logo: {
+    width: 150, // Ukuran logo lebih besar sedikit
+    height: 150, // Ukuran logo lebih besar sedikit
+    marginBottom: 20,
+    borderRadius: 75, // Setengah dari lebar dan tinggi untuk membuatnya lingkaran
+  },
+  activityIndicator: {
+    marginTop: 20, // Memberikan jarak antara logo dan loading spinner
+  },
   text: {
-    marginTop: 20,
+    marginTop: 30, // Memindahkan teks lebih ke bawah
     fontSize: 24,
     fontWeight: 'bold',
     color: '#4CAF50',
+  },
+  copyright: {
+    position: 'absolute',
+    bottom: 20, // Menempatkan teks di bagian bawah
+    fontSize: 14,
+    color: '#999',
   },
 });
 
