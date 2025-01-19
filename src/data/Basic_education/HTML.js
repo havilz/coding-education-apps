@@ -7,11 +7,11 @@ const HTMLDetailScreen = ({ navigation }) => {
   };
 
   const navigateToCSS = () => {
-    navigation.navigate('CSSDetailScreen');
+    navigation.navigate('CSS');
   };
 
   const navigateToJavaScript = () => {
-    navigation.navigate('JavaScriptDetailScreen');
+    navigation.navigate('JavaScript');
   };
 
   const navigateToQuiz = () => {
